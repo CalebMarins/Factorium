@@ -1,5 +1,7 @@
 {
   "name": "factorium",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
