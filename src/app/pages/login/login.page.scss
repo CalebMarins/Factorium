@@ -10,7 +10,7 @@
     background-color:#ffffff;
 }
 .flb{
-    background-color: #0159A3;
+    background-color: #0159A2;
     height: 100%;
     width: 100%;
     animation: pulse 1s linear forwards;
@@ -49,12 +49,26 @@
     }
 }
 
+.bg-image{
+    width: 100%;
+    height: 100%;
+    //background-color: #0159A3;
+    background-image: url('src/assets/images/login_wlp.png');
+    background-size: cover;
+    background-position: center;
+    margin: 0%;
+}
 
-img{
-    
-    margin-top:30px;
-    margin-left:20%;
+.overlay{
+   width:100%;
+   height: 100%;
+   background: linear-gradient(to top, #000,transparent);
+}
+
+.logo{
     width: 200px;
+    text-align: center;
+    opacity: 70%;
 }
 
 .login{
