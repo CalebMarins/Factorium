@@ -9,3 +9,31 @@
 @import '~@ionic/angular/css/text-alignment.css';
 @import '~@ionic/angular/css/text-transformation.css';
 @import '~@ionic/angular/css/flex-utils.css';
+//Fonts
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,700');
+
+//Global
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+//Colors
+.main{
+   color:  var(--ion-color-main)
+}
+
+.snow{
+    color: var(--ion-color-snow)
+}
+
+.dark{
+    color: var(--ion-color-dark)
+}
+
+.google{
+    color: var(--ion-color-google)
+}
+
+.facebook{
+    color: var(--ion-color-facebook)
+}
