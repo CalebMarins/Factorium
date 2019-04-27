@@ -62,44 +62,60 @@
 .overlay{
    width:100%;
    height: 100%;
-   background: linear-gradient(to top, #000,transparent);
+   background: linear-gradient(to top, rgba(0, 0, 0, 0.800),rgba(0, 0, 0, 0.750),rgba(0, 0, 0, 0.700),transparent);
 }
 
 .logo{
-    width: 200px;
-    text-align: center;
-    opacity: 70%;
+    width: 40%;
 }
 
-.login{
-    text-align: center;
-    border:nome;
-    text-decoration: none;
-    display: inline-block;
-    text-transform: uppercase;
+.text-form{
+    font-size: 17px
+}
+
+.esqueceu{
+    text-align: right;
+    font-size: 15px;
+    color: #497fac;
+}
+
+.btn-login{
+    padding: 10px;
+    background: #fafafa;
+    border-radius: 5px;
+    color: #0159a1;
+}
+
+.btn-n-conta{
+    color: #497fac;
     font-size: 13px;
-    transition: all 0.3s ease-in-out;
-    width: 95%;
-    height: 35px;
-    color: #ffffff;
 }
 
-input[type=text], input[type=password]{
-    background-color: #f6f6f6;
-    border:none;
-    color: #535353;
-    padding: 15px 32px;
-    text-decoration: none;
-    font-size: 16px;
-    margin:5px;
-    width: 95%;
-    border: 2px solid #f6f6f6;
-    transition: all 0.5s ease-in-out;
-    height: 35px;
-    text-align: center;
-    margin: 0 auto;
-    margin-bottom: 10px;
+.ou-color{
+    color:#d8d9fc69;
 }
+
+.btn-google{
+    padding: 10px;
+    background: #A32020;
+    border-radius: 5px;
+    color: #fafafa;
+}
+
+.btn-face{
+    padding: 10px;
+    background: #3B5998;
+    border-radius: 5px;
+    color: #fafafa;
+    font-size: 15px;
+}
+
+
+
+
+
+
+
 
 
 .animation-target {
