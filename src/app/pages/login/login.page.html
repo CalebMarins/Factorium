@@ -19,71 +19,130 @@
           <img src="assets/icon/iel_s_80.png" class="logo">
         </div>
 
-        <!--CONTEUDO-->
-        <div class="mg-top-10">
-          <!--TÍTULO-->
-          <h5 class="snow-color center bold no-margin">
-            Pelo futuro da indústria
-          </h5>
-          <!-- SUBTÍTULO -->
-          <p class="assist-snow-color center light no-margin mg-top-40">
-            Efetue o login para continuar
-          </p>
+        <!-- LOGIN -->
+        <div *ngIf="login">
+          <!--CONTEUDO-->
+          <div class="mg-top-10">
+            <!--TÍTULO-->
+            <h5 class="snow-color center bold no-margin">
+              Pelo futuro da indústria
+            </h5>
+            <!-- SUBTÍTULO -->
+            <p class="assist-snow-color center light no-margin mg-top-40">
+              Efetue o login para continuar
+            </p>
+          </div>
+
+          <!-- FORMS -->
+          <div class="no-pading padding-left-right-15 mg-top-15">
+
+            <!-- EMAIL -->
+            <div>
+              <ion-label position="stacked" class="snow-color bold text-form">Email</ion-label>
+              <ion-item class="no-padding mg-top-5">
+                <ion-input clear-input class="iel-color" type="email" placeholder="Email"></ion-input>
+              </ion-item>
+            </div>
+
+            <!-- SENHA -->
+            <div class="mg-top-20">
+              <ion-label position="stacked" class="snow-color bold text-form">Senha</ion-label>
+              <ion-item class="no-padding mg-top-5">
+                <ion-input clear-input class="iel-color" type="password" placeholder="Senha"></ion-input>
+              </ion-item>
+            </div>
+            <!-- ESQUECEU SUA SENHA -->
+            <div class="esqueceu mg-top-5 bold">
+              Esqueceu sua senha?
+            </div>
+
+            <!-- BUTTON LOGIN -->
+            <div class="padding-left-right-40 mg-top-20">
+              <div class="btn-login center bold">
+                LOGIN
+              </div>
+            </div>
+
+            <!-- NOVA CONTA -->
+            <div class="btn-n-conta mg-top-20 center bold" (click)="exibirCadastro()">
+              Não possui uma conta? Cadastre-se agora
+            </div>
+
+            <!-- DIVISÓRIA -->
+            <div class="ou-color mg-top-15 center">
+              ou
+            </div>
+
+            <!-- BUTTON GOOGLE -->
+            <div class="padding-left-right-40 mg-top-15">
+              <div class="btn-google center">
+                <ion-icon name="logo-googleplus"></ion-icon>
+                Sign up with Google
+              </div>
+            </div>
+
+            <!-- BUTTON FACEBOOK -->
+            <div class="padding-left-right-40 mg-top-15">
+              <div class="btn-face center">
+                <ion-icon name="logo-facebook"></ion-icon>
+                Sign up with Facebook
+              </div>
+            </div>
+          </div>
         </div>
 
-        <!-- FORMS -->
-        <div class="no-pading padding-left-right-40 mg-top-20">
-
-          <!-- EMAIL -->
-          <div>
-            <ion-label position="stacked" class="snow-color bold text-form">Email</ion-label>
-            <ion-item class="no-padding mg-top-5">
-              <ion-input clear-input class="iel-color" type="email" placeholder="Email"></ion-input>
-            </ion-item>
+        <!-- CADASTRO -->
+        <div *ngIf="cadastro">
+          <!--CONTEUDO-->
+          <div class="mg-top-10">
+            <!--TÍTULO-->
+            <h5 class="snow-color center bold no-margin">
+              Pelo futuro da indústria
+            </h5>
+            <!-- SUBTÍTULO -->
+            <p class="assist-snow-color center  no-margin mg-top-40">
+              Preencha os dados para se cadastrar
+            </p>
           </div>
 
-          <!-- SENHA -->
-          <div class="mg-top-20">
-            <ion-label position="stacked" class="snow-color bold text-form">Senha</ion-label>
-            <ion-item class="no-padding mg-top-5">
-              <ion-input clear-input class="iel-color" type="password" placeholder="Senha"></ion-input>
-            </ion-item>
-          </div>
-          <!-- ESQUECEU SUA SENHA -->
-          <div class="esqueceu mg-top-5 bold">
-            Esqueceu sua senha?
-          </div>
+          <!-- FORMS -->
+          <div class="no-pading padding-left-right-15 mg-top-15">
 
-          <!-- BUTTON LOGIN -->
-          <div class="padding-left-right-40 mg-top-20">
-            <div class="btn-login center">
-              LOGIN
+            <!-- NOME -->
+            <div class="mg-top-20">
+              <ion-label position="stacked" class="snow-color text-form bold">Nome</ion-label>
+              <ion-item class="no-padding mg-top-5">
+                <ion-input clear-input class="iel-color" type="text" placeholder="Digite o seu nome completo">
+                </ion-input>
+              </ion-item>
             </div>
-          </div>
 
-          <!-- NOVA CONTA -->
-          <div class="btn-n-conta mg-top-20 center bold">
-            Não possui uma conta? Cadastre-se agora
-          </div>
-
-          <!-- DIVISÓRIA -->
-          <div class="ou-color mg-top-20 center">
-            ou
-          </div>
-
-          <!-- BUTTON GOOGLE -->
-          <div class="padding-left-right-40 mg-top-15">
-            <div class="btn-google center">
-              <ion-icon name="logo-googleplus"></ion-icon>
-              Sign up with Google
+            <!-- EMAIL -->
+            <div class="mg-top-20">
+              <ion-label position="stacked" class="snow-color bold text-form">Email</ion-label>
+              <ion-item class="no-padding mg-top-5">
+                <ion-input clear-input class="iel-color" type="email" placeholder="Digite o seu endereço de email">
+                </ion-input>
+              </ion-item>
             </div>
-          </div>
 
-          <!-- BUTTON FACEBOOK -->
-          <div class="padding-left-right-40 mg-top-15">
-            <div class="btn-face center font-btn">
-              <ion-icon name="logo-facebook"></ion-icon>
-              Sign up with Facebook
+            <!-- SENHA -->
+            <div class="mg-top-20">
+              <ion-label position="stacked" class="snow-color bold text-form">Senha</ion-label>
+              <ion-item class="no-padding mg-top-5">
+                <ion-input clear-input class="iel-color" type="password" placeholder="Digite uma senha"></ion-input>
+              </ion-item>
+            </div>
+
+            <!-- BUTTON CADASTRAR -->
+            <div class="padding-left-right-40 mg-top-40">
+              <div class="btn-cadastro center bold">
+                CADASTRAR
+              </div>
+            </div>
+            <!-- JÁ POSSUO CONTA -->
+            <div class="btn-s-conta mg-top-30 center bold"(click)="exibirLogin()">
+              Já possui uma conta?
             </div>
           </div>
         </div>
