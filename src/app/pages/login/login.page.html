@@ -40,7 +40,7 @@
             <div>
               <ion-label position="stacked" class="snow-color bold text-form">Email</ion-label>
               <ion-item class="no-padding mg-top-5">
-                <ion-input clear-input class="iel-color" type="email" placeholder="Email"></ion-input>
+                <ion-input clear-input class="iel-color" type="email" placeholder="Email" [(ngModel)]="loginForm.email"></ion-input>
               </ion-item>
             </div>
 
@@ -48,17 +48,17 @@
             <div class="mg-top-20">
               <ion-label position="stacked" class="snow-color bold text-form">Senha</ion-label>
               <ion-item class="no-padding mg-top-5">
-                <ion-input clear-input class="iel-color" type="password" placeholder="Senha"></ion-input>
+                <ion-input clear-input class="iel-color" type="password" placeholder="Senha" [(ngModel)]="loginForm.password"></ion-input>
               </ion-item>
             </div>
             <!-- ESQUECEU SUA SENHA -->
-            <div class="esqueceu mg-top-5 bold">
+            <div class="esqueceu mg-top-5 bold" (click)="exibirEsqueceu()">
               Esqueceu sua senha?
             </div>
 
             <!-- BUTTON LOGIN -->
             <div class="padding-left-right-40 mg-top-20">
-              <div class="btn-login center bold">
+              <div class="btn-login center bold" (click)="fazerLogin()">
                 LOGIN
               </div>
             </div>
@@ -91,6 +91,45 @@
           </div>
         </div>
 
+        <!-- ESQUECI A SENHA -->
+        <div *ngIf="esqueceu">
+          <!--CONTEUDO-->
+          <div class="mg-top-10">
+            <!--TÍTULO-->
+            <h5 class="snow-color center bold no-margin">
+              Pelo futuro da indústria
+            </h5>
+            <!-- SUBTÍTULO -->
+            <div class="mg-esqueci-sub">
+            <p class="assist-snow-color center mg-top-20">
+              Digite o email cadastrado
+            </p>
+          </div>
+          </div>
+          <!-- FORMS -->
+          <div class="no-pading padding-left-right-15 mg-top-15">
+
+            <!-- EMAIL -->
+            <div class="mg-top-20">
+              <ion-label position="stacked" class="snow-color bold text-form">Email</ion-label>
+              <ion-item class="no-padding mg-top-5">
+                <ion-input clear-input class="iel-color" type="email" placeholder="Digite o seu endereço de email" [(ngModel)]="esqueceuForm.email">
+                </ion-input>
+              </ion-item>
+            </div>
+            <!-- BUTTON PROSSEGUIR -->
+            <div class="padding-left-right-40 mg-top-70">
+              <div class="btn-cadastro center bold">
+                CONTINUAR
+              </div>
+            </div>
+            <!-- VOLTAR -->
+            <div class="btn-s-conta mg-top-30 center bold" (click)="exibirLogin()">
+              Voltar
+            </div>
+          </div>
+        </div>
+
         <!-- CADASTRO -->
         <div *ngIf="cadastro">
           <!--CONTEUDO-->
@@ -100,7 +139,7 @@
               Pelo futuro da indústria
             </h5>
             <!-- SUBTÍTULO -->
-            <p class="assist-snow-color center  no-margin mg-top-40">
+            <p class="assist-snow-color center no-margin mg-top-40">
               Preencha os dados para se cadastrar
             </p>
           </div>
@@ -112,7 +151,7 @@
             <div class="mg-top-20">
               <ion-label position="stacked" class="snow-color text-form bold">Nome</ion-label>
               <ion-item class="no-padding mg-top-5">
-                <ion-input clear-input class="iel-color" type="text" placeholder="Digite o seu nome completo">
+                <ion-input clear-input class="iel-color" type="text" placeholder="Digite o seu nome completo" [(ngModel)]="cadastroForm.nome">
                 </ion-input>
               </ion-item>
             </div>
@@ -121,7 +160,7 @@
             <div class="mg-top-20">
               <ion-label position="stacked" class="snow-color bold text-form">Email</ion-label>
               <ion-item class="no-padding mg-top-5">
-                <ion-input clear-input class="iel-color" type="email" placeholder="Digite o seu endereço de email">
+                <ion-input clear-input class="iel-color" type="email" placeholder="Digite o seu endereço de email" [(ngModel)]="cadastroForm.email">
                 </ion-input>
               </ion-item>
             </div>
@@ -130,18 +169,18 @@
             <div class="mg-top-20">
               <ion-label position="stacked" class="snow-color bold text-form">Senha</ion-label>
               <ion-item class="no-padding mg-top-5">
-                <ion-input clear-input class="iel-color" type="password" placeholder="Digite uma senha"></ion-input>
+                <ion-input clear-input class="iel-color" type="password" placeholder="Digite uma senha" [(ngModel)]="cadastroForm.password"></ion-input>
               </ion-item>
             </div>
 
             <!-- BUTTON CADASTRAR -->
             <div class="padding-left-right-40 mg-top-40">
-              <div class="btn-cadastro center bold">
+              <div class="btn-cadastro center bold" (click)="fazerCadastro()">
                 CADASTRAR
               </div>
             </div>
             <!-- JÁ POSSUO CONTA -->
-            <div class="btn-s-conta mg-top-30 center bold"(click)="exibirLogin()">
+            <div class="btn-s-conta mg-top-30 center bold" (click)="exibirLogin()">
               Já possui uma conta?
             </div>
           </div>
