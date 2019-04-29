@@ -1,7 +1,7 @@
 <div id="custom-overlay" [style.display]="splash ? 'flex' : 'none'">
   <div class="flb">
     <div class="Aligner-item Aligner-item--top"></div>
-    <img src="assets/icon/iel.png">
+    <img src="../../../assets/icon/iel.png">
     <div class="Aligner-item Aligner-item--bottom"></div>
   </div>
 </div>
@@ -16,7 +16,7 @@
       <div class="container">
         <!--LOGO-->
         <div class="center padding-top-10-percent">
-          <img src="assets/icon/iel_s_80.png" class="logo">
+          <img src="../../../assets/icon/iel_s_80.png" class="logo">
         </div>
 
         <!-- LOGIN -->
@@ -119,7 +119,7 @@
             </div>
             <!-- BUTTON PROSSEGUIR -->
             <div class="padding-left-right-40 mg-top-70">
-              <div class="btn-cadastro center bold">
+              <div class="btn-cadastro center bold"(click)="resetPassword()">
                 CONTINUAR
               </div>
             </div>

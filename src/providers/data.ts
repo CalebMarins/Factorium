@@ -5,6 +5,7 @@ import {
 } from 'angularfire2/firestore';
 
 import { Observable } from 'rxjs';
+import { getDefaultService } from 'selenium-webdriver/edge';
 
 @Injectable() export class FirebaseProvider {
     constructor(private afs: AngularFirestore) { }
@@ -14,4 +15,12 @@ import { Observable } from 'rxjs';
         .collection("Users")
         .doc(data.uid)
         .set(data);
+
+    getUser(uid) {
+        return this.afs.firestore.collection('User')
+            .doc(uid)
+            .get();
+    }
+    
 }
+
