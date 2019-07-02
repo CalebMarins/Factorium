@@ -1,13 +1,84 @@
 <ion-header>
-    <ion-toolbar color="primary">
-      <ion-buttons slot="start">
-        <ion-menu-button></ion-menu-button>
-      </ion-buttons>
-      <ion-title>Hall da imersão</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  
-  <ion-content padding>
-  
-  </ion-content>
-  
+  <ion-toolbar color="primary">
+    <ion-title>Hall da imersão</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <!-- SLIDERS-->
+  <h5 class="iel-color titulos">Entenda como Titta e Tittan funcionam</h5>
+  <ion-slides pager class="customSlides">
+    <ion-slide class="slide" style="background-image: url(../../../assets/images/titta.png)" (click)="titta()">
+    </ion-slide>
+    <ion-slide class="slide  slide2" style="background-image: url(../../../assets/images/tittan.png)" (click)="tittan()">
+    </ion-slide>
+  </ion-slides>
+  <h5 class="iel-color titulos mg-top-30">Quais as próximas imersões?</h5>
+
+  <!-- PROMEIRO CARD -->
+  <ion-card class="mg-top-5">
+    <img src="../../../assets/images/China_card.jpeg">
+    <ion-card-header>
+      <ion-card-title class="iel-color">China</ion-card-title>
+      <ion-card-subtitle class="dark-color">22 a 26 de abril</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content class="text-color text-card">
+      Visitas a empresas em Pequim, Xangai, Hangzhou
+      <div class="mg-top-10">
+        Valor das incrições:
+        <div class="iel-color mg-top-3">
+          US$ 4.200,00
+        </div>
+      </div>
+      <ion-button class="iel-color" fill="outline" slot="end" (click)="lugarum()">Saiba Mais</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- SEGUNDO CARD -->
+  <ion-card>
+    <img src="../../../assets/images/Japan_card.jpg">
+    <ion-card-header>
+      <ion-card-title class="iel-color">Japão</ion-card-title>
+      <ion-card-subtitle class="dark-color">30 de setembro a 04 de outubro</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content class="text-color text-card">
+      Detalhes em andamensto ainda, logo mais novas atualizações
+      <div class="mg-top-10">
+        Valor das incrições:
+        <div class="iel-color mg-top-3">
+          US$ 4.200,00
+        </div>
+        <ion-button class="iel-color" fill="outline" slot="end" (click)="lugardois()">Saiba Mais</ion-button>
+
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+   <!--  TERCEIROO CARD -->
+   <ion-card>
+    <img src="../../../assets/images/brasil_card.jpg">
+    <ion-card-header>
+      <ion-card-title class="iel-color">Brasil</ion-card-title>
+      <ion-card-subtitle class="dark-color">04 a 08 de novembro</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content class="text-color text-card">
+      Saiba mais da imersão aqui no Brasil, aberta ao público
+        
+        <div class="iel-color mg-top-5">
+          Incrições gratuitas
+        </div>
+        <ion-button class="iel-color" fill="outline" slot="end" (click)="lugardois()">Saiba Mais</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-item>
+      <ion-icon class="iel-color" name="calendar" slot="start"></ion-icon>
+      <ion-label>Ir para o cronograma</ion-label>
+      <ion-button class="iel-color" fill="outline" slot="end" (click)="tab1()">Ver</ion-button>
+    </ion-item>
+    <ion-card-content>
+      Confira o cronograma completo na nossa próxima imersão!
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

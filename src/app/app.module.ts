@@ -25,6 +25,11 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 
+import {GooglePlus} from '@ionic-native/google-plus/ngx';
+
+import {StreamingMedia} from  '@ionic-native/streaming-media/ngx';
+
+
 
 
 
@@ -41,11 +46,14 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
     IonicStorageModule.forRoot()
   ],
   providers: [
+    GooglePlus,
     AuthProvider,
     FirebaseProvider,
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    StreamingMedia,
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    
   ],
   bootstrap: [AppComponent]
 })

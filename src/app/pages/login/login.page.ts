@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { LoadingController, AlertController, } from '@ionic/angular';
+import { LoadingController, AlertController, Platform } from '@ionic/angular';
 import { Router } from '@angular/router';
 import { AuthProvider } from '../../../providers/auth';
 import { FirebaseProvider } from '../../../providers/data';
 import { Storage } from '@ionic/storage';
+
+import {GooglePlus} from '@ionic-native/google-plus/ngx'
 
 @Component({
   selector: 'app-login',
@@ -41,7 +43,9 @@ export class LoginPage implements OnInit {
     private firebaseProvider: FirebaseProvider,
     private loadingController: LoadingController,
     private alertController: AlertController,
-    private storage: Storage
+    private storage: Storage,
+    private google : GooglePlus,
+    private platform : Platform
   ) { }
 
   //Exibir form de Cadastro
@@ -104,7 +108,7 @@ export class LoginPage implements OnInit {
             this.storage.set('usuario', data)
               .then(() => {
                 load.dismiss();
-                this.router.navigate(['/menu/master'])
+                this.router.navigate(['/master'])
               })
 
           })
@@ -122,6 +126,11 @@ export class LoginPage implements OnInit {
         }
 
       })
+  }
+
+  //Login Google
+  googleLogin(){
+    this.authProvider.loginGoogle(); 
   }
 
   //Cadastro
@@ -187,6 +196,10 @@ export class LoginPage implements OnInit {
             alertSucesso.present();
             this.exibirLogin();
           })
+          .catch(()=>{
+            load.dismiss();
+          })
+          
       })
       .catch((erro) => {
         load.dismiss();
@@ -217,7 +230,16 @@ export class LoginPage implements OnInit {
     const alertSucesso = await this.alertController.create({
       header: 'Operação realizada com sucesso!',
       message: 'Solicitação foi enviada para o seu email',
-      buttons: ['OK']
+      buttons: [
+        {
+          text: 'Voltar ao Login',
+          handler: () => { 
+            this.exibirLogin();
+            alertSucesso.dismiss();
+          }
+        }
+        ]
+      
     });
 
     //Alert de falha Reset1 - Email inválido
